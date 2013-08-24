@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A43F7C6A-03E5-23A2-DDEF-A2EAB916E9F3" name="Role">
+<createdBy>dje01</createdBy>
+<createdTime>2013-06-03 15:15:35 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<engineerTo>
+<item key="7A0BD5F3-3CAA-F579-E9BF-A9E7C047A32A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="name" id="75E7F10C-E31B-8574-9903-C23751F3725E">
+<createdBy>dje01</createdBy>
+<createdTime>2013-06-03 15:15:35 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<engineerTo>
+<item key="7A0BD5F3-3CAA-F579-E9BF-A9E7C047A32A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+</Attribute>
+<Attribute name="description" id="F8AC0C13-F834-5A08-8BBC-46AC05BFBCC9">
+<createdBy>dje01</createdBy>
+<createdTime>2013-06-03 15:15:35 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<engineerTo>
+<item key="7A0BD5F3-3CAA-F579-E9BF-A9E7C047A32A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="EC2C4DF5-C7ED-0F2E-9A2A-80E185A427BC" name="Key_1">
+<createdBy>dje01</createdBy>
+<createdTime>2013-06-03 15:19:47 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<engineerTo>
+<item key="7A0BD5F3-3CAA-F579-E9BF-A9E7C047A32A" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>75E7F10C-E31B-8574-9903-C23751F3725E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

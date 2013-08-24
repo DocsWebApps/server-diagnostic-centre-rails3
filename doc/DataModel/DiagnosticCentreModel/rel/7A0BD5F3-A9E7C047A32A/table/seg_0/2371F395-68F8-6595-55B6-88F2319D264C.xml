@@ -1,0 +1,211 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" id="2371F395-68F8-6595-55B6-88F2319D264C" directorySegmentName="seg_0" name="process_metrics">
+<createdBy>dje01</createdBy>
+<createdTime>2012-10-04 10:45:33 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<pkName>tblProcessData_PK</pkName>
+<fonts>
+<FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+<foType>Title</foType>
+<fontStyle>1</fontStyle>
+<colorRGB>-16776961</colorRGB>
+</FontObject>
+<FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+<foType>Column</foType>
+<colorRGB>-16777216</colorRGB>
+</FontObject>
+<FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+<foType>Datatype</foType>
+<colorRGB>-16744448</colorRGB>
+</FontObject>
+<FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+<foType>PK Element</foType>
+<colorRGB>-16776961</colorRGB>
+</FontObject>
+<FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+<foType>FK Element</foType>
+<colorRGB>-16777216</colorRGB>
+</FontObject>
+<FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+<foType>UK Element</foType>
+<colorRGB>-16776961</colorRGB>
+</FontObject>
+<FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+<foType>Not Null</foType>
+<colorRGB>-65536</colorRGB>
+</FontObject>
+<FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+<foType>Key</foType>
+<colorRGB>-16777216</colorRGB>
+</FontObject>
+</fonts>
+<columns>
+<Column class="oracle.dbtools.crest.model.design.relational.Column" name="id" id="09E4A089-97A9-DDDE-9703-81AA337AA665">
+<createdBy>dje01</createdBy>
+<createdTime>2012-10-04 10:45:33 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Column>
+<Column class="oracle.dbtools.crest.model.design.relational.Column" name="date" id="77B66E68-8C7C-F8A6-C946-8A360AA3FABE">
+<createdBy>dje01</createdBy>
+<createdTime>2012-10-04 10:45:33 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+</Column>
+<Column class="oracle.dbtools.crest.model.design.relational.Column" name="time" id="92FF73E1-BE79-3755-916C-254F0D565D1E">
+<createdBy>dje01</createdBy>
+<createdTime>2012-11-22 11:12:31 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+</Column>
+<Column class="oracle.dbtools.crest.model.design.relational.Column" name="proc_id" id="A58255BD-0DEB-5975-9551-EFD838071E96">
+<createdBy>dje01</createdBy>
+<createdTime>2012-10-04 10:45:33 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Column>
+<Column class="oracle.dbtools.crest.model.design.relational.Column" name="proc_name" id="509CFC30-C36E-42DB-6423-631A9D8525CD">
+<createdBy>dje01</createdBy>
+<createdTime>2012-10-04 10:45:33 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+</Column>
+<Column class="oracle.dbtools.crest.model.design.relational.Column" name="proc_owner" id="22FE206B-B8AC-B83E-E43C-AEEB6A1EFFC2">
+<createdBy>dje01</createdBy>
+<createdTime>2012-10-04 10:45:33 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+</Column>
+<Column class="oracle.dbtools.crest.model.design.relational.Column" name="cpu" id="3F5D6983-EB30-A76E-241A-59D0684E37B9">
+<createdBy>dje01</createdBy>
+<createdTime>2012-10-04 10:45:33 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+</Column>
+<Column class="oracle.dbtools.crest.model.design.relational.Column" name="mem" id="9D164A14-C236-269D-DC47-5D1E4394CBE7">
+<createdBy>dje01</createdBy>
+<createdTime>2012-10-04 10:45:33 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+</Column>
+<Column class="oracle.dbtools.crest.model.design.relational.Column" name="threads" id="FB2F990E-FC56-75D8-88CC-F047B9B922A5">
+<createdBy>dje01</createdBy>
+<createdTime>2012-10-04 10:45:33 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Column>
+<Column class="oracle.dbtools.crest.model.design.relational.Column" name="disk" id="C5863512-DD54-A5C6-5B7B-9773EAA33BAD">
+<createdBy>dje01</createdBy>
+<createdTime>2012-11-02 12:04:16 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+</Column>
+<Column class="oracle.dbtools.crest.model.design.relational.Column" name="server_id" id="15B9747F-FF4B-9D51-1D48-6686DB9A45B2">
+<createdBy>dje01</createdBy>
+<createdTime>2012-10-04 10:45:33 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>51B84698-4DCF-73DB-DD59-05219FC4850F</delegate>
+<associations>
+<colAssociation fkAssociation="946850C2-0A2C-8B05-8EED-44E9536BF3AE" referredColumn="51B84698-4DCF-73DB-DD59-05219FC4850F"/>
+</associations>
+</Column>
+<Column class="oracle.dbtools.crest.model.design.relational.Column" name="created_at" id="169A6683-3081-B769-63EB-7A726D4ADB1A">
+<createdBy>dje01</createdBy>
+<createdTime>2012-10-04 10:45:33 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+</Column>
+<Column class="oracle.dbtools.crest.model.design.relational.Column" name="updated_at" id="6E24425F-30EF-862B-68BF-5BFF76CF8582">
+<createdBy>dje01</createdBy>
+<createdTime>2012-10-04 10:45:33 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+</Column>
+</columns>
+<indexes>
+<ind_PK_UK class="oracle.dbtools.crest.model.design.relational.Index" id="629E2599-D3B0-44A4-AD40-3C0D911A0AB5" name="process_data_pkey">
+<createdBy>dje01</createdBy>
+<createdTime>2012-10-04 10:45:33 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="09E4A089-97A9-DDDE-9703-81AA337AA665"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK class="oracle.dbtools.crest.model.design.relational.Index" id="FB7CC9A9-1BD5-6C23-5DC7-36414845BE5F" name="process_data__UN">
+<createdBy>dje01</createdBy>
+<createdTime>2012-10-04 10:45:33 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="77B66E68-8C7C-F8A6-C946-8A360AA3FABE"/>
+<colUsage columnID="A58255BD-0DEB-5975-9551-EFD838071E96"/>
+<colUsage columnID="15B9747F-FF4B-9D51-1D48-6686DB9A45B2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK class="oracle.dbtools.crest.model.design.relational.Index" id="96EAA4B2-CD03-DFA8-29E0-8AA32C3883CF" name="index_process_data_on_datetime">
+<createdBy>dje01</createdBy>
+<createdTime>2012-10-04 10:45:33 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<indexColumnUsage>
+<colUsage columnID="77B66E68-8C7C-F8A6-C946-8A360AA3FABE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK class="oracle.dbtools.crest.model.design.relational.Index" id="494E865F-E6A2-BF3F-9938-4C2FC6C8F733" name="process_data__IDX">
+<createdBy>dje01</createdBy>
+<createdTime>2012-10-04 10:45:33 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<indexColumnUsage>
+<colUsage columnID="15B9747F-FF4B-9D51-1D48-6686DB9A45B2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK class="oracle.dbtools.crest.model.design.relational.Index" id="2F2EB6FA-CBDD-4485-5058-A25CC5A46EE0" name="process_data_servers_FK">
+<createdBy>dje01</createdBy>
+<createdTime>2012-10-04 10:45:33 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<indexColumnUsage>
+<colUsage columnID="15B9747F-FF4B-9D51-1D48-6686DB9A45B2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,11 @@
+Version 1_0: Completed 17th June 2013
+Feature 1. Graphically display server metrics for a given date - Completed 18012013
+Feature 2. Graphically display processes metrics for a given time period - Completed 18012013
+Feature 3. Graphically display a process's metrics for a given day - Completed 18012013
+Feature 4. Add a feature to enable a user to change their password - Completed 10062013
+Feature 5. Create different roles for users - Completed 03062013
+Feature 6. Add a feature for admins to add users/role/servers to the system - Completed 17062013
+Feature 7. Calculate average hourly figures and display in a table/graph for server metric and indicidual process displays - Completed 23052013
+Feature 8. Enhance and finish cucumber scripts - Completed 05042013 
+Feature 9. Comment out filtering code on all processes/processes views/model - Completed 22052013
+DJE01@12032013

@@ -1,0 +1,62 @@
+<% provide(:title,'ServerDiagnosticCentre Home') %>
+<%= render('layouts/welcome')%>
+<section id="home-page">
+	<section id="home-second-section"> 
+		<h1>Welcome to the Server Diagnostic Centre Homepage</h1> 
+		<p>The Server Diagnostic Centre is a collection of tools designed to graphically display server metrics (ie. % CPU utilisation data, % memory utilisation data, disk and network utilisation etc.) of various servers from across your estate.</p>
+		<p>Web based tools graphically display and analyse the data for the purposes of trend analysis, capacity management, performance comparisons over time and incident / diagnostic analysis.</p> 
+		<p>Please select one of the tools from the drop down menu.</p>
+		<select name="selectTool" id="selectTool" onchange=toolSelect()>
+			<option value="dummy">Select Tool</option>
+			<option value="SystemAnalyserHome">System Analyser</option>
+		</select>
+	</section>
+	<section id="home-third-section">
+		<h1>About the Implementation</h1> 
+		<p>The Server Diagnostic Centre has been developed using open source software.</p>
+		<p>This version of the application has been developed using the Ruby on Rails web development framework powered by a backend PostgreSQL database.</p>
+		<p>This application is hosted on a Linux server and the web applications can be developed and supported by your in-house support and development team.</p>
+		<%= image_tag('rails.jpg', class: "home-image") %><%= image_tag('ruby.jpg',class: "home-image") %><%= image_tag('postsql.jpg', class: "home-image home-psql") %>
+	</section> 
+	<section id="home-fourth-section"> 	
+		<h1>Change Your Password</h1>
+			<%= form_for :session, url: "/session/change_password", method: 'post'  do |f| %>
+     		<%= f.label "Current Password", class: "label" %>
+     		<%= f.password_field :old_password, class: "entry", id: 'old_password' %>
+      		<%= f.label "New Password", class:"label" %>
+      		<%= f.password_field :new_password, class: "entry",id: 'new_password' %>
+      		<%= f.label "Confirm New Password", class:"label" %>
+      		<%= f.password_field :confirmation, class: "entry", id: 'confirmation' %>
+      		<%= f.submit "SUBMIT", id: "change-password-button", class: 'submit-button' %>
+    	<% end %>
+    </section>
+    <% if @user.role.name.to_sym == :admin %>
+    	<section id="home-fifth-section"> 	
+			<h1>Add a New User</h1>
+			<%= form_for :session, url: '/session/add_user', method: 'post'  do |f| %>
+     			<%= f.label "Name", class: "label" %>
+     			<%= f.text_field :name, class: "entry", id: 'name' %>
+     			<%= f.label "Email", class: "label" %>
+     			<%= f.text_field :email, class: "entry", id: 'email' %>
+      			<%= f.label "Password", class:"label" %>
+      			<%= f.password_field :password, class: "entry",id: 'password' %>
+      			<%= f.label "Confirm New Password", class:"label" %>
+      			<%= f.password_field :confirmation, class: "entry", id: 'confirmation' %>
+      			<%= f.label "Role", class:"label" %><br>
+      			<%= f.select :role, ['admin','user'], class:'entry',id:'role' %><br>
+      			<%= f.submit "SUBMIT", id: "add-user-button", class: 'submit-button' %>
+    		<% end %>
+    	</section>
+    	<section id="home-sixth-section"> 	
+			<h1>Add a New Server</h1>
+			<%= form_for :session, url: '/session/add_server', method: 'post'  do |f| %>
+     			<%= f.label "Server Name", class: "label" %>
+     			<%= f.text_field :host_name, class: "entry", id: 'host_name' %>
+      			<%= f.submit "SUBMIT", id: "add-server-button", class: 'submit-button' %>
+    		<% end %>
+    	</section>
+    <% end %>
+</section>
+
+
+

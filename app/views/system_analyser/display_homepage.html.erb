@@ -1,0 +1,53 @@
+<% provide(:title,'SystemAnalyser Home') %>
+<%= render('layouts/welcome')%>
+<section id="sysan-page">
+	<section id="sysan-second-section"> 
+		<h1>Welcome to the System Analyser Homepage</h1> 
+		<p>This tool allows you to view various server metrics for a given server on a given day. The server metrics displayed are:</p>
+		<ul>
+			<li>The CPU, hourly average CPU and memory utilisation of the server</li>
+			<li>The number of disk read/writes per second on the server's local hard disks</li>
+			<li>The number of network packets comming into and out of the server per second</li>
+		</ul>
+		<p>These displays can assist you in identifying system problems, performance problems, or potential capacity issues on the server.</p>
+		<p>An example screenshot is displayed below.</p>
+		<br>
+		<p><%= image_tag('sysan_cpumem.jpg', class: 'sysan-image') %></p>
+		<p><%= image_tag('sysan_disk.jpg', class: 'sysan-image') %></p>
+		<p><%= image_tag('sysan_netinout.jpg', class: 'sysan-image') %></p>
+		<br>
+		<p>If any abnormal behaviour is observered in the server metric displays, the System Analyser allows you zoom in to view the CPU, memory and disk utilisation of all the individual processes that were running on the server at that time. You achieve this by simply using the mouse to highlight the area containing the abnormal behaviour you're interested in on either the CPU, memory or disk utilisation server metric displays.</p>
+		<p>An example screenshot is displayed below.</p>
+		<br>
+		<p><%= image_tag('sysan_processes.jpg', class: 'sysan-image') %></p>
+		<br>
+		<p>While viewing the indivdual processes running on the server you can focus in on any single process to view its CPU, memory and disk utilisation plus the thread count for the process for the whole day in question. Cross hairs are provided to aid in the analysis and quick links are provided to see the process's behaviour the day before and the day after for comparison.</p>
+		<p>An example screenshot is displayed below.</p>
+		<br>
+		<p><%= image_tag('sysan_process_cpumem.jpg', class: 'sysan-image') %></p>
+		<p><%= image_tag('sysan_process_disk.jpg', class: 'sysan-image') %></p>
+	</section> 
+	<section id="sysan-third-section">
+		<h1>How to Use the System Analyser</h1>
+		<% if @server_date_switch %>
+        	<p>Simply select a server from the drop down list. </p>
+        	<select name='selectServer' id='selectServer' onchange=serverSelect()>
+        		<option value='dummy' selected='selected'></option>
+        			<% @server_list.each do |server| %>
+        				<option value="<%= server.id %>"><%= server.host_name %></option>
+        			<% end %>  
+        	</select>
+         <% else %>
+         	<p>You have selected the server:</p>
+         	<p id="server-name"><%= @server_name %></p>
+         	<p>Now select a date from the drop down list below, or select "Change Server" to choose different server.</p>
+         	<select name='selectDate' id='selectDate' onchange=dateSelect()>
+        		<option value='dummy' selected='selected'></option>
+        		<option value="reset">Change Server</option>
+        		<%= @date_list.each do |dl| %>
+        			<option value="<%= @server_id %>:<%= dl.date %>"><%= dl.date %></option>
+        		<% end %>
+        	</select>
+         <% end %>
+	</section> 
+</section>

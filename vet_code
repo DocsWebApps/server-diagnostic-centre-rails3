@@ -1,0 +1,2 @@
+bundle exec reek $1
+bundle exec flog $1

@@ -1,0 +1,66 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+.debug_dump {
+  clear: both;
+  width: 80%;
+  margin: 45px auto 0px auto;
+  border-style: solid;
+  @include box_sizing;
+}
+
+#pageHeader {
+	background: url(/assets/server_room.jpg)no-repeat;
+	padding: 150px 0px 0px 0px;
+	margin: 0px auto 0px auto;
+	width: 1281px;
+	border-radius: 10px;
+}
+
+#headerTitle {
+	color: #FFFFFF;
+	background-color: #5555AA;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	padding: 10px 0px 10px 0px;
+	width: 1280px;
+	margin: 0px auto 0px auto;
+}
+
+footer {
+  padding-top: 5px;
+  border-top: 1px solid ;
+  margin: 0px auto 0px auto;
+  width: 1281px;
+  color: #999999;
+}
+
+#common-section {
+  margin: 5px auto 0px auto;
+  padding: 0px 0px 20px 0px;
+  width: 1281px;
+  color: #444444; 
+  font-weight: bold;
+  font-style: italic;
+}
+ 

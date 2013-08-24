@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="hostName" id="1A0A9BB6-B672-E3D2-83E0-176BFDAB725D" directorySegmentName="seg_0">
+<createdBy>dje01</createdBy>
+<createdTime>2012-09-24 13:30:00 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<engineerTo>
+<item key="7A0BD5F3-3CAA-F579-E9BF-A9E7C047A32A" value="true"/>
+</engineerTo>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>42261686-21B1-7B66-C30E-0101696D67B0</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>5109A653-E3EF-4849-C6C1-6838B3279AFC</targetEntity>
+<transferable>true</transferable>
+</Relation>

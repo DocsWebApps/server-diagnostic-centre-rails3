@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="DiagnosticCentreModel" id="F421566E-707E-5C11-96FD-0C2C46670C35" version="3.5">
+<createdBy>dje01</createdBy>
+<createdTime>2012-07-26 12:10:16 UTC</createdTime>
+<ownerDesignName>SystemAnalyserSchema</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>F421566E-707E-5C11-96FD-0C2C46670C35</designId>
+</OSDM_Design>

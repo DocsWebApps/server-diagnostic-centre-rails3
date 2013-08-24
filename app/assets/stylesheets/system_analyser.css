@@ -1,0 +1,111 @@
+#sysan-page {
+  margin: 0px auto 4400px auto;
+  background-color: #DDDDDD;
+  width: 1281px;
+}
+
+#first-section {
+  margin: 5px auto 0px auto;
+  padding: 0px 0px 20px 0px;
+  width: 1281px;
+  color: #444444; 
+  font-weight: bold;
+  font-style: italic;
+}
+
+#sysan-second-section {
+  width: 800px;
+  color: #444444;
+  padding: 20px 0px 0px 0px;
+  float: left;
+}
+
+#sysan-third-section {
+  width: 400px;
+  color: #444444;
+  padding: 20px 0px 0px 0px;
+  float: right;
+}
+
+.sysan-image {
+  width: 800px;
+}
+
+#server-name {
+  font-weight: bold;
+}
+
+h2 {
+  text-align: center;
+  color: #444444; 
+}
+
+h4 { 
+  font-style: italic;
+}
+
+#chart {
+  width: 1270px;
+  height: 450px;
+  margin: 0px auto 50px auto;
+}
+
+#legend {
+  width: 1270px;
+  margin: 0px auto 20px auto;
+}
+
+#cpu-chart {
+  width: 1270px;
+  height: 450px;
+  margin: 0px auto 50px auto;
+}
+
+#mem-chart {
+  width: 1270px;
+  height: 450px;
+  margin: 0px auto 50px auto;
+}
+
+#thread-chart {
+  width: 1270px;
+  height: 450px;
+  margin: 0px auto 50px auto;
+}
+
+#netin-chart {
+  width: 1270px;
+  height: 450px;
+  margin: 0px auto 50px auto;
+}
+
+#netout-chart {
+  width: 1270px;
+  height: 450px;
+  margin: 0px auto 50px auto;
+}
+
+#disk-chart {
+  width: 1270px;
+  height: 450px;
+  margin: 0px auto 50px auto;
+}
+
+#table {
+  color: #444444; 
+  border: 1px solid black;
+  width: 1270px;
+  margin: 0px auto 50px auto;
+}
+
+#key {
+  color: #444444; 
+  width: 1270px;
+  margin: 0px auto 20px auto;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+td {
+  text-align: center;
+}

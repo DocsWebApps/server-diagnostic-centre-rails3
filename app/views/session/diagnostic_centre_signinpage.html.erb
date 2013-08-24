@@ -1,0 +1,23 @@
+<% provide(:title,'Login') %>
+<div id="loginBox">
+	<section id="loginPadlock">
+		<%= image_tag("padlock.jpg") %>
+	</section>
+	<section id="loginDetails">		
+		    <%= form_for :session, url: '/session'  do |f| %>
+      			<%= f.label :email, class: "label" %>
+     		 	<%= f.text_field :email, class: "entry" %>
+      			<%= f.label :password, class:"label" %>
+      			<%= f.password_field :password, class: "entry" %>
+      			<%= f.submit "LOGIN", id: "login-button" %>
+    		<% end %>
+	</section>
+	<div id="loginMessage">
+		<h3>Important: Please read !</h3>
+		<p>This is a private computer system. Only authorised people may login in to the Server Diagnostic Centre.</p>
+		<p>To log out of the Server Diagnostic Centre, simply close down your browser and your session will be terminated.</p>
+	</div>
+</div>
+
+
+

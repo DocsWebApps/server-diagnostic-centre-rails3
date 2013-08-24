@@ -1,0 +1,128 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EE921910-454E-38F4-D226-3B5DF7BEEB44" name="users">
+<createdBy>dje01</createdBy>
+<createdTime>2012-09-12 14:39:19 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="F196B131-BEB2-A60B-3E2F-E18CE75D3A9D">
+<createdBy>dje01</createdBy>
+<createdTime>2012-09-24 13:58:30 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Column>
+<Column name="name" id="63E4F5A5-A362-A362-14A3-80C6FBF7BCF1">
+<createdBy>dje01</createdBy>
+<createdTime>2012-09-12 14:39:19 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+</Column>
+<Column name="email" id="064E11D9-40B7-99DB-8141-1DC4BA409787">
+<createdBy>dje01</createdBy>
+<createdTime>2012-09-12 14:39:19 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+</Column>
+<Column name="password_digest" id="55A944AB-08F2-F3D0-4DA6-DB965C6D09AF">
+<createdBy>dje01</createdBy>
+<createdTime>2012-09-12 14:39:19 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+</Column>
+<Column name="role_id" id="1A390C6B-BAFA-5A78-BB40-2DE8D791F7B9">
+<createdBy>dje01</createdBy>
+<createdTime>2013-06-03 15:27:41 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="created_at" id="78EB9503-1584-12C7-1410-C6DD57444A37">
+<createdBy>dje01</createdBy>
+<createdTime>2012-09-24 13:59:23 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+</Column>
+<Column name="updated_at" id="D3EA63C3-D55E-7D8A-2E8B-46186A3BC776">
+<createdBy>dje01</createdBy>
+<createdTime>2012-09-24 13:59:23 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+</Column>
+<Column name="Roles_id" id="3F183B17-084A-4BE0-71CD-52AAACCF32C7">
+<createdBy>dje01</createdBy>
+<createdTime>2013-06-03 15:28:19 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>CE8CDF86-A773-7F71-0583-E98CB02F7465</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6FA017B6-BEF0-AA59-236D-390AA4407EDD" referredColumn="CE8CDF86-A773-7F71-0583-E98CB02F7465"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="55192880-19BF-810F-6DA2-3F91D57AACD9" name="users_pkey">
+<createdBy>dje01</createdBy>
+<createdTime>2012-09-12 14:39:19 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="F196B131-BEB2-A60B-3E2F-E18CE75D3A9D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="67111B84-F944-743F-EC7F-CF44BD199788" name="users__UN">
+<createdBy>dje01</createdBy>
+<createdTime>2012-09-24 13:58:59 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="064E11D9-40B7-99DB-8141-1DC4BA409787"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8483F300-53C6-A777-00D4-83CC6F92B7B7" name="index_users_on_email">
+<createdBy>dje01</createdBy>
+<createdTime>2012-09-12 14:39:19 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<indexColumnUsage>
+<colUsage columnID="064E11D9-40B7-99DB-8141-1DC4BA409787"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BB8E5CB3-6CCE-B488-7389-F1B908253E9A" name="users_Roles_FK">
+<createdBy>dje01</createdBy>
+<createdTime>2013-06-03 15:28:19 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3F183B17-084A-4BE0-71CD-52AAACCF32C7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

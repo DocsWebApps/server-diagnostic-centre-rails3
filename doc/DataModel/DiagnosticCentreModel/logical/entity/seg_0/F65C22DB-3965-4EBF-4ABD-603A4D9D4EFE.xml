@@ -1,0 +1,153 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F65C22DB-3965-4EBF-4ABD-603A4D9D4EFE" name="ProcessMetric">
+<createdBy>dje01</createdBy>
+<createdTime>2012-09-24 13:31:07 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<engineerTo>
+<item key="7A0BD5F3-3CAA-F579-E9BF-A9E7C047A32A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="date" id="0AA1E358-E7AF-E01D-E24D-648A2375B110">
+<createdBy>dje01</createdBy>
+<createdTime>2012-09-24 13:31:07 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<engineerTo>
+<item key="7A0BD5F3-3CAA-F579-E9BF-A9E7C047A32A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+</Attribute>
+<Attribute name="time" id="70886506-18D1-4F04-8926-377A6BC7C0DD">
+<createdBy>dje01</createdBy>
+<createdTime>2012-11-22 11:14:46 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<engineerTo>
+<item key="7A0BD5F3-3CAA-F579-E9BF-A9E7C047A32A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+</Attribute>
+<Attribute name="proc_id" id="7FAC7B3F-028D-FC5A-FE66-1132081E7904">
+<createdBy>dje01</createdBy>
+<createdTime>2012-09-24 14:25:38 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<engineerTo>
+<item key="7A0BD5F3-3CAA-F579-E9BF-A9E7C047A32A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="proc_name" id="203ACEB5-BD10-01CB-E64B-6E51F3580E86">
+<createdBy>dje01</createdBy>
+<createdTime>2012-09-24 14:25:38 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<engineerTo>
+<item key="7A0BD5F3-3CAA-F579-E9BF-A9E7C047A32A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="proc_owner" id="2868AEF8-2AA6-E23A-C787-FE106DF76D1D">
+<createdBy>dje01</createdBy>
+<createdTime>2012-09-24 14:25:39 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<engineerTo>
+<item key="7A0BD5F3-3CAA-F579-E9BF-A9E7C047A32A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+</Attribute>
+<Attribute name="cpu" id="16E22B04-4A19-2C4E-F023-FA63D9FDBC1C">
+<createdBy>dje01</createdBy>
+<createdTime>2012-09-24 13:31:07 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<engineerTo>
+<item key="7A0BD5F3-3CAA-F579-E9BF-A9E7C047A32A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+</Attribute>
+<Attribute name="mem" id="088268B3-2C6A-78F8-7A69-C4012DD13C63">
+<createdBy>dje01</createdBy>
+<createdTime>2012-09-24 13:31:07 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<engineerTo>
+<item key="7A0BD5F3-3CAA-F579-E9BF-A9E7C047A32A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+</Attribute>
+<Attribute name="threads" id="366B7BE2-912C-83C6-B9D5-ABACC79E9B61">
+<createdBy>dje01</createdBy>
+<createdTime>2012-09-24 13:31:21 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<engineerTo>
+<item key="7A0BD5F3-3CAA-F579-E9BF-A9E7C047A32A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="disk" id="E458FC88-0712-2D17-13B3-508A30980D3A">
+<createdBy>dje01</createdBy>
+<createdTime>2012-11-02 12:00:52 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<engineerTo>
+<item key="7A0BD5F3-3CAA-F579-E9BF-A9E7C047A32A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+</Attribute>
+<Attribute name="host_name" id="B4AB1597-47DA-18D5-CDCE-53E48E14C28E">
+<createdBy>dje01</createdBy>
+<createdTime>2012-09-24 14:30:00 UTC</createdTime>
+<generatorID>BA2DCB12-725E-CB5B-5947-174635D86761</generatorID>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<engineerTo>
+<item key="7A0BD5F3-3CAA-F579-E9BF-A9E7C047A32A" value="true"/>
+</engineerTo>
+<referedAttribute>7599131B-EE44-9C4B-F2F4-F3F37FFEDB63</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="38034C26-4853-FAA8-F5A6-951C1B076C08" name="Key_1">
+<createdBy>dje01</createdBy>
+<createdTime>2012-09-24 13:31:07 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<engineerTo>
+<item key="7A0BD5F3-3CAA-F579-E9BF-A9E7C047A32A" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0AA1E358-E7AF-E01D-E24D-648A2375B110</attributeRef>
+<attributeRef>7FAC7B3F-028D-FC5A-FE66-1132081E7904</attributeRef>
+<attributeRef>B4AB1597-47DA-18D5-CDCE-53E48E14C28E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

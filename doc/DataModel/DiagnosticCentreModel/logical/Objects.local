@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="A43F7C6A-03E5-23A2-DDEF-A2EAB916E9F3" name="Role" seqName="seg_0"/>
+   <object objectType="Entity" objectID="42261686-21B1-7B66-C30E-0101696D67B0" name="Server" seqName="seg_0"/>
+   <object objectType="Entity" objectID="5109A653-E3EF-4849-C6C1-6838B3279AFC" name="ServerMetric" seqName="seg_0"/>
+   <object objectType="Entity" objectID="F65C22DB-3965-4EBF-4ABD-603A4D9D4EFE" name="ProcessMetric" seqName="seg_0"/>
+   <object objectType="Entity" objectID="E606160F-5A17-7FB8-1379-A526A46ACFA8" name="User" seqName="seg_0"/>
+   <object objectType="Relation" objectID="26E7B064-77F4-96BD-94A9-CA9A26545E5F" name="Relation_4" seqName="seg_0"/>
+   <object objectType="Relation" objectID="BA2DCB12-725E-CB5B-5947-174635D86761" name="hostName" seqName="seg_0"/>
+   <object objectType="Relation" objectID="1A0A9BB6-B672-E3D2-83E0-176BFDAB725D" name="hostNamev1" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

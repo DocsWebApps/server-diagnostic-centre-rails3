@@ -1,0 +1,116 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5109A653-E3EF-4849-C6C1-6838B3279AFC" name="ServerMetric">
+<createdBy>dje01</createdBy>
+<createdTime>2012-09-24 12:35:11 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<engineerTo>
+<item key="7A0BD5F3-3CAA-F579-E9BF-A9E7C047A32A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="date" id="6F1D4851-D032-019B-87FE-B8CF2F74C824">
+<createdBy>dje01</createdBy>
+<createdTime>2012-09-24 12:35:11 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<engineerTo>
+<item key="7A0BD5F3-3CAA-F579-E9BF-A9E7C047A32A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+</Attribute>
+<Attribute name="time" id="CE579A9C-B001-82B7-C923-7AE8BD0012DA">
+<createdBy>dje01</createdBy>
+<createdTime>2012-11-22 11:14:16 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<engineerTo>
+<item key="7A0BD5F3-3CAA-F579-E9BF-A9E7C047A32A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+</Attribute>
+<Attribute name="cpu" id="F8A30834-7C1A-E80B-4416-0FF476341911">
+<createdBy>dje01</createdBy>
+<createdTime>2012-09-24 12:37:06 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<engineerTo>
+<item key="7A0BD5F3-3CAA-F579-E9BF-A9E7C047A32A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+</Attribute>
+<Attribute name="mem" id="21FAE218-7F32-D0D2-FCD9-0046B11DEA62">
+<createdBy>dje01</createdBy>
+<createdTime>2012-09-24 12:37:16 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<engineerTo>
+<item key="7A0BD5F3-3CAA-F579-E9BF-A9E7C047A32A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+</Attribute>
+<Attribute name="net_in" id="C474113A-92A9-167F-D6AC-1D31C1757977">
+<createdBy>dje01</createdBy>
+<createdTime>2012-11-02 11:59:13 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<engineerTo>
+<item key="7A0BD5F3-3CAA-F579-E9BF-A9E7C047A32A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+</Attribute>
+<Attribute name="net_out" id="0AEEDB33-77BD-F68B-549E-A6837FEFFB5F">
+<createdBy>dje01</createdBy>
+<createdTime>2012-11-02 11:58:57 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<engineerTo>
+<item key="7A0BD5F3-3CAA-F579-E9BF-A9E7C047A32A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+</Attribute>
+<Attribute name="disk" id="76BAEBD5-1B6F-8FC5-9600-CF660EE2021B">
+<createdBy>dje01</createdBy>
+<createdTime>2012-11-02 11:57:59 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<engineerTo>
+<item key="7A0BD5F3-3CAA-F579-E9BF-A9E7C047A32A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5205352C-F3F6-A851-0065-940A1AD4049B" name="Key_1">
+<createdBy>dje01</createdBy>
+<createdTime>2012-09-24 12:37:40 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<engineerTo>
+<item key="7A0BD5F3-3CAA-F579-E9BF-A9E7C047A32A" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6F1D4851-D032-019B-87FE-B8CF2F74C824</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

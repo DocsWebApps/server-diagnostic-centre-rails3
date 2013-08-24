@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" id="8C809896-BD6C-402C-0033-90CFCC97496C" directorySegmentName="seg_0" name="servers">
+<createdBy>dje01</createdBy>
+<createdTime>2012-10-04 10:45:33 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<pkName>tblServerLookup_PK</pkName>
+<fonts>
+<FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+<foType>Title</foType>
+<fontStyle>1</fontStyle>
+<colorRGB>-16776961</colorRGB>
+</FontObject>
+<FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+<foType>Column</foType>
+<colorRGB>-16777216</colorRGB>
+</FontObject>
+<FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+<foType>Datatype</foType>
+<colorRGB>-16744448</colorRGB>
+</FontObject>
+<FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+<foType>PK Element</foType>
+<colorRGB>-16776961</colorRGB>
+</FontObject>
+<FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+<foType>FK Element</foType>
+<colorRGB>-16777216</colorRGB>
+</FontObject>
+<FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+<foType>UK Element</foType>
+<colorRGB>-16776961</colorRGB>
+</FontObject>
+<FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+<foType>Not Null</foType>
+<colorRGB>-65536</colorRGB>
+</FontObject>
+<FontObject class="oracle.dbtools.crest.model.design.FontObjectWr">
+<foType>Key</foType>
+<colorRGB>-16777216</colorRGB>
+</FontObject>
+</fonts>
+<columns>
+<Column class="oracle.dbtools.crest.model.design.relational.Column" name="id" id="51B84698-4DCF-73DB-DD59-05219FC4850F">
+<createdBy>dje01</createdBy>
+<createdTime>2012-10-04 10:45:33 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Column>
+<Column class="oracle.dbtools.crest.model.design.relational.Column" name="host_name" id="F1765DA8-492B-4F9A-F825-5C0C98675FE7">
+<createdBy>dje01</createdBy>
+<createdTime>2012-10-04 10:45:33 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+</Column>
+<Column class="oracle.dbtools.crest.model.design.relational.Column" name="created_at" id="63733AE0-399A-CC4A-A9D8-2EAFDE9A8C2E">
+<createdBy>dje01</createdBy>
+<createdTime>2012-10-04 10:45:33 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+</Column>
+<Column class="oracle.dbtools.crest.model.design.relational.Column" name="updated_at" id="C4AAC3C8-C024-207F-1C31-0F61CF371471">
+<createdBy>dje01</createdBy>
+<createdTime>2012-10-04 10:45:33 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+</Column>
+</columns>
+<indexes>
+<ind_PK_UK class="oracle.dbtools.crest.model.design.relational.Index" id="45206EF1-BFE1-87B3-5E62-7F5FD157E5CB" name="servers_pkey">
+<createdBy>dje01</createdBy>
+<createdTime>2012-10-04 10:45:33 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="51B84698-4DCF-73DB-DD59-05219FC4850F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK class="oracle.dbtools.crest.model.design.relational.Index" id="79EF64CC-6376-ED36-839E-204988CC8593" name="servers__UN">
+<createdBy>dje01</createdBy>
+<createdTime>2012-10-04 10:45:33 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="F1765DA8-492B-4F9A-F825-5C0C98675FE7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

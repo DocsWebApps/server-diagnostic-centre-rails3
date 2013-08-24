@@ -1,0 +1,55 @@
+<% provide(:title,@server_name.capitalize+' : '+@date+" (S/M)") %>
+<%= render('layouts/welcome')%>
+<h2>Server Metrics for <span id="server-id" value=<%= @server_id %>><%= @server_name.upcase %></span> Taken on <span id="date-id" value=<%= @date %>><%= @date %></span></h2>
+<div id="cpu-chart"></div>
+<div id="mem-chart"></div>
+<div id="disk-chart"></div>
+<div id="netin-chart"></div>
+<div id="netout-chart"></div>
+<script type="text/javascript">
+	var cpu_chart=$("#cpu-chart");
+	var mem_chart=$("#mem-chart");
+	var netin_chart=$("#netin-chart");
+	var netout_chart=$("#netout-chart");
+	var disk_chart=$("#disk-chart");
+	
+	$(function () {
+    	var cpu_metrics=<%= @server_metrics['cpu_metrics'] %>
+    	var mem_metrics=<%= @server_metrics['mem_metrics'] %>
+    	var netin_metrics=<%= @server_metrics['netin_metrics'] %>
+    	var netout_metrics=<%= @server_metrics['netout_metrics'] %>
+    	var disk_metrics=<%= @server_metrics['disk_metrics'] %>
+    	var cpu_av_metrics=<%= @server_metrics['cpu_av_metrics'] %>
+    	
+    	cpu_chart.bind("plotselected", function (event, ranges) {
+    		dt=document.getElementById("date-id").getAttribute("value");
+    		svr=document.getElementById("server-id").getAttribute("value");
+
+        	var url="/SystemAnalyserProcessMetrics/cpu/" + svr +"/" + dt + "/" + ranges.xaxis.from.toFixed(1)*10 + "/" + ranges.xaxis.to.toFixed(1)*10;
+  			window.open(url,'_blank');
+     	});
+     	
+     	mem_chart.bind("plotselected", function (event, ranges) {
+    		dt=document.getElementById("date-id").getAttribute("value");
+    		svr=document.getElementById("server-id").getAttribute("value");
+
+        	var url="/SystemAnalyserProcessMetrics/mem/" + svr +"/" + dt + "/" + ranges.xaxis.from.toFixed(1)*10 + "/" + ranges.xaxis.to.toFixed(1)*10;
+  			window.open(url,'_blank');
+     	});
+     	
+     	disk_chart.bind("plotselected", function (event, ranges) {
+    		dt=document.getElementById("date-id").getAttribute("value");
+    		svr=document.getElementById("server-id").getAttribute("value");
+
+        	var url="/SystemAnalyserProcessMetrics/disk/" + svr +"/" + dt + "/" + ranges.xaxis.from.toFixed(1)*10 + "/" + ranges.xaxis.to.toFixed(1)*10;
+  			window.open(url,'_blank');
+     	});
+        
+    	$.plot(cpu_chart, [{data: cpu_metrics, label: 'CPU Utilisation (%)', color: '#5555AA'},{data: cpu_av_metrics, label: 'Hourly Average', color: '#FFFFFF'}],{xaxis: {mode: 'time',minTickSize: [1, 'hour']},crosshair: { mode: 'xy'},selection: { mode: 'x'},yaxis: {min: 0}, grid: {backgroundColor: '#FFFFED'}});
+    	$.plot(mem_chart, [{data: mem_metrics, label: 'Memory Utilisation (%)', color: '#55AA55'}],{xaxis: {mode: 'time',minTickSize: [1, 'hour']},crosshair: { mode: 'xy'},selection: { mode: 'x'},yaxis: {min: 0, max: 100}, grid: {backgroundColor: '#FFFFED'}});
+    	$.plot(disk_chart, [{data: disk_metrics, label: 'Disk Utilisation (IO/sec)', color: '#AA5555'}],{xaxis: {mode: 'time',minTickSize: [1, 'hour']},crosshair: { mode: 'xy'},selection: { mode: 'x'},yaxis: {min: 0}, grid: {backgroundColor: '#FFFFED'}});
+    	$.plot(netin_chart, [{data: netin_metrics, label: 'Network In Utilisation (packets/sec)', color: '#676767'}],{xaxis: {mode: 'time',minTickSize: [1, 'hour']},crosshair: { mode: 'xy'},yaxis: {min: 0}, grid: {backgroundColor: '#FFFFED'}});
+    	$.plot(netout_chart, [{data: netout_metrics, label: 'Network Out Utilisation (packets/sec)', color: '#5A5AA5'}],{xaxis: {mode: 'time',minTickSize: [1, 'hour']},crosshair: { mode: 'xy'},yaxis: {min: 0}, grid: {backgroundColor: '#FFFFED'}});
+    	
+    });
+</script>

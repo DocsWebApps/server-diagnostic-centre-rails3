@@ -1,0 +1,52 @@
+<% provide(:title,@server_name.capitalize+' : '+@date+" (P/M)") %>
+<%= render('layouts/welcome')%>
+<h2><span id='type-id' value=<%= @chart_type %>><%= @chart_type.upcase %></span> Usage <%= @units %> of Individual Processes Running on <span id='server-id' value=<%= @server_id %>><%= @server_name.upcase %></span> Taken on <span id='date-id' value=<%= @date %>><%= @date %></h2>
+<div id='chart'></div>
+<p id='key'>Process ID Key and Process Details Table</p>
+<div id='legend'></div>
+<script type='text/javascript'>
+	var metric_chart=$("#chart");
+	
+	<% options="" %>
+	$(function () {
+		<% @process_metrics.each do |key,value| %>
+			var <%= 'p_'+key.to_s %>=<%= value %>
+			<% options=options + "{data: p_" + key.to_s + ", label: " + key.to_s + "}," %>
+		<% end %>
+		
+		metric_chart.bind("plotselected", function (event, ranges) {
+    		svr=document.getElementById("server-id").getAttribute("value");
+    		dt=document.getElementById("date-id").getAttribute("value");
+    		type=document.getElementById("type-id").getAttribute("value");
+    		
+    		if (type=='mem') {
+    			lower_limit=ranges.yaxis.from.toFixed(1)*1024*10
+    			upper_limit=ranges.yaxis.to.toFixed(1)*1024*10
+    		} else {
+    			lower_limit=ranges.yaxis.from.toFixed(1)*10
+    			upper_limit=ranges.yaxis.to.toFixed(1)*10
+    		}
+
+        	var url="/SystemAnalyserProcessMetrics/" + svr + "/" + dt + "/" + type + "/" + ranges.xaxis.from.toFixed(1)*10 + "/" + ranges.xaxis.to.toFixed(1)*10 + "/" + lower_limit + "/" + upper_limit;
+  			window.open(url,'_blank');
+     	});
+     	
+		$.plot(metric_chart, [<%= options %>],{xaxis: {mode: 'time',minTickSize: [1, 'minute']},crosshair: { mode: 'xy' },selection: { mode: 'xy'},legend: {noColumns:20, container: $("#legend")}, grid: {backgroundColor: '#FFFFED'}});
+	});
+</script>
+<table id='table' border="1">
+	<tr>
+		<th>Process ID</th>
+		<th>Process Name</th>
+		<th>Process Owner</th>
+		<th>Thread Count</th>
+	</tr>
+	<% @table_data.each do |key, value| %>
+		<%= value.html_safe %>
+	<% end %>
+</table>
+
+
+
+
+

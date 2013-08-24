@@ -1,0 +1,76 @@
+<% provide(:title,@server_name.capitalize+' : '+@date.to_s+' : '+@process_id) %>
+<%= render('layouts/welcome')%>
+<h2>Process Metrics taken from server <span id="server-id" value=<%= @server_id %>><%= @server_name.upcase %></span> on <span id="date-id" value=<%= @date %>><%= @date %></span> for process <span id="process-id" value=<%= @process_id %>><%= @process_id %></span></h2>
+<table id='table' border="1">
+	<tr>
+		<th></th>
+		<th>Process ID</th>
+		<th>Process Name</th>
+		<th>Process Owner</th>
+		<th></th>
+	</tr>
+	<tr>
+		<td><%= @prev_date.html_safe %></td>
+		<td><%= @process_id %></td>
+		<td><%= @process_name %></td>
+		<td><%= @process_owner %></td>
+		<td><%= @next_date.html_safe %></td>
+	</tr>
+</table>
+<div id="cpu-chart"></div>
+<div id="mem-chart"></div>
+<div id="disk-chart"></div>
+<div id="thread-chart"></div>
+
+<script type="text/javascript">
+	var cpu_chart=$("#cpu-chart");
+	var mem_chart=$("#mem-chart");
+	var disk_chart=$("#disk-chart");
+	var thread_chart=$("#thread-chart");
+
+	
+	$(function () {
+    	var cpu_metrics=<%= @process_metrics['cpu_metrics'] %>
+    	var mem_metrics=<%= @process_metrics['mem_metrics'] %>
+    	var disk_metrics=<%= @process_metrics['disk_metrics'] %>
+    	var thread_metrics=<%= @process_metrics['thread_metrics'] %>
+    	var cpu_av_metrics=<%= @process_metrics['cpu_av_metrics'] %>
+    	
+    	cpu_chart.bind("plotselected", function (event, ranges) {
+    		proc_id=document.getElementById("process-id").getAttribute("value");
+    		svr=document.getElementById("server-id").getAttribute("value");
+
+        	var url="/SystemAnalyserProcessMetrics/" + proc_id +"/" + svr + "/" + ranges.xaxis.from.toFixed(1)*10 + "/" + ranges.xaxis.to.toFixed(1)*10;
+  			window.open(url,'_blank');
+     	});
+     	
+     	mem_chart.bind("plotselected", function (event, ranges) {
+    		proc_id=document.getElementById("process-id").getAttribute("value");
+    		svr=document.getElementById("server-id").getAttribute("value");
+
+        	var url="/SystemAnalyserProcessMetrics/" + proc_id +"/" + svr + "/" + ranges.xaxis.from.toFixed(1)*10 + "/" + ranges.xaxis.to.toFixed(1)*10;
+  			window.open(url,'_blank');
+     	});
+     	
+     	disk_chart.bind("plotselected", function (event, ranges) {
+    		proc_id=document.getElementById("process-id").getAttribute("value");
+    		svr=document.getElementById("server-id").getAttribute("value");
+
+        	var url="/SystemAnalyserProcessMetrics/" + proc_id +"/" + svr + "/" + ranges.xaxis.from.toFixed(1)*10 + "/" + ranges.xaxis.to.toFixed(1)*10;
+  			window.open(url,'_blank');
+     	});
+     	
+     	thread_chart.bind("plotselected", function (event, ranges) {
+    		proc_id=document.getElementById("process-id").getAttribute("value");
+    		svr=document.getElementById("server-id").getAttribute("value");
+
+        	var url="/SystemAnalyserProcessMetrics/" + proc_id +"/" + svr + "/" + ranges.xaxis.from.toFixed(1)*10 + "/" + ranges.xaxis.to.toFixed(1)*10;
+  			window.open(url,'_blank');
+     	});
+        
+    	$.plot(cpu_chart, [{data: cpu_metrics, label: 'CPU Utilisation (%)', color: '#5555AA'},{data: cpu_av_metrics, label: 'Hourly Average', color: '#FFFFFF'}],{xaxis: {mode: 'time',minTickSize: [1, 'minute']},crosshair: { mode: 'xy'},selection: { mode: 'x'},yaxis: {min: 0}, grid: {backgroundColor: '#FFFFED'}});
+    	$.plot(mem_chart, [{data: mem_metrics, label: 'Memory Utilisation (MB)', color: '#55AA55'}],{xaxis: {mode: 'time',minTickSize: [1, 'minute']},crosshair: { mode: 'xy'},selection: { mode: 'x'},yaxis: {min: 0}, grid: {backgroundColor: '#FFFFED'}});
+    	$.plot(disk_chart, [{data: disk_metrics, label: 'Disk Utilisation (IO/sec)', color: '#AA5555'}],{xaxis: {mode: 'time',minTickSize: [1, 'minute']},crosshair: { mode: 'xy'},selection: { mode: 'x'},yaxis: {min: 0}, grid: {backgroundColor: '#FFFFED'}});
+		$.plot(thread_chart, [{data: thread_metrics, label: 'Process Thread Count', color: '#994488'}],{xaxis: {mode: 'time',minTickSize: [1, 'minute']},crosshair: { mode: 'xy'},selection: { mode: 'x'},yaxis: {min: 0}, grid: {backgroundColor: '#FFFFED'}});
+   });
+</script>

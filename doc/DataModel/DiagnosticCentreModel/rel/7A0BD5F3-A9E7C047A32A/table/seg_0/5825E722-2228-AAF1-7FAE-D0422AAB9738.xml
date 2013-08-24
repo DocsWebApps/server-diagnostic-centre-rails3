@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5825E722-2228-AAF1-7FAE-D0422AAB9738" name="roles">
+<createdBy>dje01</createdBy>
+<createdTime>2013-06-03 15:23:55 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="CE8CDF86-A773-7F71-0583-E98CB02F7465">
+<createdBy>dje01</createdBy>
+<createdTime>2013-06-03 15:26:27 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="2ACF5139-1F9E-C6B5-C397-DA1806D08009">
+<createdBy>dje01</createdBy>
+<createdTime>2013-06-03 15:23:55 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+</Column>
+<Column name="description" id="F98DD164-8CD5-D151-A45D-AC1FB9447FDC">
+<createdBy>dje01</createdBy>
+<createdTime>2013-06-03 15:33:31 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="created_at" id="6AF540D0-3613-628D-6DCA-C7402B40B345">
+<createdBy>dje01</createdBy>
+<createdTime>2013-06-03 15:23:55 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+</Column>
+<Column name="updated_at" id="FD7819BC-BAA1-1F26-272B-F37676ECD088">
+<createdBy>dje01</createdBy>
+<createdTime>2013-06-03 15:23:55 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D4AEBB10-458D-5E3D-2A55-05DA00DD151D" name="roles_PK">
+<createdBy>dje01</createdBy>
+<createdTime>2013-06-03 15:23:56 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="CE8CDF86-A773-7F71-0583-E98CB02F7465"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="03475F4C-6AFE-C591-7C41-BE4868FBE392" name="Roles__UN">
+<createdBy>dje01</createdBy>
+<createdTime>2013-06-03 15:27:10 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2ACF5139-1F9E-C6B5-C397-DA1806D08009"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

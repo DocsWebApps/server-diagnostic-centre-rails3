@@ -1,0 +1,12 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" id="946850C2-0A2C-8B05-8EED-44E9536BF3AE" directorySegmentName="seg_0" name="process_data_servers_FK">
+<createdBy>dje01</createdBy>
+<createdTime>2012-10-04 10:45:33 UTC</createdTime>
+<ownerDesignName>DiagnosticCentreModel</ownerDesignName>
+<containerWithKeyObject>2371F395-68F8-6595-55B6-88F2319D264C</containerWithKeyObject>
+<deleteRule>RESTRICT</deleteRule>
+<localFKIndex>2F2EB6FA-CBDD-4485-5058-A25CC5A46EE0</localFKIndex>
+<keyObject>45206EF1-BFE1-87B3-5E62-7F5FD157E5CB</keyObject>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+</FKIndexAssociation>

@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="8C809896-BD6C-402C-0033-90CFCC97496C" name="servers" seqName="seg_0"/>
+   <object objectType="Table" objectID="EE921910-454E-38F4-D226-3B5DF7BEEB44" name="users" seqName="seg_0"/>
+   <object objectType="Table" objectID="C8ECE343-9E62-11C3-9EFB-1704D0852D9C" name="server_metrics" seqName="seg_0"/>
+   <object objectType="Table" objectID="5825E722-2228-AAF1-7FAE-D0422AAB9738" name="roles" seqName="seg_0"/>
+   <object objectType="Table" objectID="2371F395-68F8-6595-55B6-88F2319D264C" name="process_metrics" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="946850C2-0A2C-8B05-8EED-44E9536BF3AE" name="process_data_servers_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="A231EA2C-320B-7B93-0EE6-85A9D16C8AEF" name="global_data_servers_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="6FA017B6-BEF0-AA59-236D-390AA4407EDD" name="users_Roles_FK" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>
