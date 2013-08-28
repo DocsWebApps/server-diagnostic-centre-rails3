@@ -1,18 +1,18 @@
 source 'https://rubygems.org'
 
-gem 'pg','0.14.1' 						# PostgreSQL DB access library
-gem 'rails', '3.2.11' 						# Rails framework
+gem 'pg','0.14.1' 						      # PostgreSQL DB access library
+gem 'rails', '3.2.11' 						  # Rails framework
 gem 'bcrypt-ruby', '3.0.1' 					# Encryption add on for authenticating logins
 gem 'jquery-rails','2.1.4' 					# Javascripts library
-gem 'haml','4.0.3'              # HTML shortcut
+gem 'haml','4.0.3'                  # HTML shortcut
+gem 'rb-readline', '0.4.2'          # Required for console access
 
 group :development, :test do
-  gem 'factory_girl','4.1.0' 					# Create test objects for RSpec
-  gem 'annotate', '2.5.0' 					# Add table properties info to models and specs
-  gem 'factory_girl_rails','4.1.0' 				# Create test objects
-  gem 'flog','2.5.3' 						# Test for dodgy code
-  gem 'reek','1.2.12' 						# Test for smelly code
-#  gem 'ruby-debug19', :require => 'ruby-debug' 			# Ruby debugging tool
+  gem 'factory_girl','4.1.0' 				 # Create test objects for RSpec
+  gem 'annotate', '2.5.0' 					 # Add table properties info to models and specs
+  gem 'factory_girl_rails','4.1.0' 	 # Create test objects
+  gem 'flog','2.5.3' 						     # Test for dodgy code
+  gem 'reek','1.2.12' 						   # Test for smelly code
   gem 'database_cleaner','0.9.1' 				# Cleans up the test DB
   gem 'capybara','1.1.2' 					# Simulates a browser 
   gem 'launchy','2.1.2' 					# ??

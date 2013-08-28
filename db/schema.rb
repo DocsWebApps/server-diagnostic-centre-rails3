@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130603154014) do
+ActiveRecord::Schema.define(:version => 20130828142729) do
 
   create_table "process_metrics", :force => true do |t|
     t.date     "date"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20130603154014) do
   end
 
   add_index "process_metrics", ["server_id"], :name => "index_process_metrics_on_server_id"
+  add_index "process_metrics", ["time", "server_id"], :name => "index_process_metrics_on_time_and_server_id"
 
   create_table "roles", :force => true do |t|
     t.string   "name"
