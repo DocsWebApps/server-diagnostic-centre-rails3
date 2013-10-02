@@ -1,0 +1,70 @@
+###############################
+# System Analyser Data Loader #
+# Author: Dave Elsby          #
+# Version 1 30/04/2013        #
+###############################
+#/bin/bash
+
+log_entry()
+{
+  echo $1 >> /home/dcproddb/load_data.log
+}
+
+check_lockfile()
+{
+ dt=`date`
+ if [ -f /home/dcproddb/load_data.lockfile ]
+ then
+   log_entry "$dt - Lockfile in place, run deferred"
+   exit
+ else
+   log_entry "$dt - No lockfile in place, instance running"
+   touch /home/dcproddb/load_data.lockfile
+fi
+}
+
+delete_lockfile()
+{
+  if [ -f /home/dcproddb/load_data.lockfile ]
+  then
+    rm /home/dcproddb/load_data.lockfile
+  fi 
+}
+
+get_files()
+{
+ftp -i -n <<EOF
+open 10.128.145.104
+user MonitorOp H1gh5ch00l
+bin
+mget *.sql.gz
+mdel *.sql.gz
+EOF
+}
+
+load_files()
+{
+  ls *.gz | while read line; do
+    gunzip $line
+    ls *.sql | while read SQLFILE; do
+       psql -U dcproddb -f $SQLFILE 2>&1 1>/dev/null
+       rm -f $SQLFILE
+       log_entry "$SQLFILE has been loaded"
+    done
+  done
+}
+
+# Main Script
+while [ 1=1 ] 
+do
+dt=`date`
+log_entry "$dt - Instance started....."
+#  check_lockfile
+  get_files
+  load_files
+#  delete_lockfile
+dt=`date`
+log_entry "$dt - Instance ended....."
+  sleep 60
+done
+# End of Script
