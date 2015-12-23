@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+role=Role.create(name: 'admin', description: 'Admin Role')
+
+user=role.users.create(name: "Dave Elsby", email: "admin@admin.com", password: "admin@admin.com", password_confirmation: "admin@admin.com")
+
+server=Server.create([{host_name: "gabon"},{host_name: "cyprus"},{host_name: "uganda"},{host_name: "poland"},{host_name: "france"},{host_name: "belgium"},{host_name: "brunei"},{host_name: "lesotho"},{host_name: "germany"},{host_name: "cameroon"},{host_name: "bulgaria"},{host_name: "malawi"},{host_name: "mali"},{host_name: "greece"},{host_name: "hungary"},{host_name: "egypt"},{host_name: "somalia"},{host_name: "monoco"},{host_name: "tunisia"},{host_name: "italy"},{host_name: "congo"},{host_name: "togo"},{host_name: "moldova"},{host_name: "wales"}])
+
+puts "Seed data loaded OK"

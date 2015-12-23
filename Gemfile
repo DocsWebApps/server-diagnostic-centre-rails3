@@ -26,7 +26,7 @@ group :development, :test do
 end
 
 group :assets do
-  gem 'therubyracer','0.11.2' # ??              
+  #gem 'therubyracer','0.11.2' # ??              
   gem 'uglifier','1.3.0' # ??
 end
 
