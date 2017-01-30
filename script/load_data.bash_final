@@ -1,0 +1,67 @@
+###############################
+# System Analyser Data Loader #
+# load_data.bash              #
+# Author: Dave Elsby          #
+# Version 2 06/09/2013        #
+###############################
+#/bin/bash
+
+# Set environment variables
+set_env()
+{
+  export LOAD_DATA_ROOT="/root"
+  export FTP_INBOX="/home/sdcdata"
+  export LOGFILE="$LOAD_DATA_ROOT/load_data.log"
+  export LOCKFILE="$LOAD_DATA_ROOT/load_data.lockfile"
+  export INFILE_ARCHIVE="$LOAD_DATA_ROOT/archive"
+}
+
+log_entry()
+{
+  echo $1 >> $LOGFILE
+}
+
+check_lockfile()
+{
+ if [ -f $LOCKFILE ]
+ then
+   log_entry "$dt - Lockfile in place, run deferred"
+   exit
+ else
+   log_entry "$dt - No lockfile in place, instance running"
+   touch $LOCKFILE
+fi
+}
+
+delete_lockfile()
+{
+  if [ -f $LOCKFILE ]
+  then
+    log_entry "$dt - Instance ending, deleteing lockfile"
+    rm $LOCKFILE
+  fi
+}
+
+load_files()
+{
+  ls $FTP_INBOX/*.gz 2>/dev/null | while read line; do
+    cp $line $INFILE_ARCHIVE
+    gunzip $line
+    ls $FTP_INBOX/*.sql | while read SQLFILE; do
+       psql -U sdcadmin sdcproddb -w -f $SQLFILE 2>&1 1>/dev/null
+       rm -f $SQLFILE
+       log_entry "$SQLFILE has been loaded"
+    done
+  done
+}
+
+# Main Script
+set_env
+dt=`date`
+log_entry "$dt - Instance started....."
+check_lockfile
+load_files
+delete_lockfile
+dt=`date`
+log_entry "$dt - Instance ended....."
+# End of Script
